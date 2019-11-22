@@ -8,7 +8,7 @@
 					{{ range .Site.Data.footer.share }}
 					<li> 
 						{{ $url := .url | relLangURL }}
-						{{ partial "social-sharer.html" (dict "context" . "url" $url "name" .name) }}
+						{{ partial "social-sharer.html" (dict "context" . "url" .url "name" .name) }}
 						{{ end }}
 				</ul>
 			</div>
