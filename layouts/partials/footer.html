@@ -7,12 +7,12 @@
 				<ul class="social-list">
 					{{ range .Site.Data.footer.share }}
 					<li> 
-						{{ $url := .Site.Params.url | relLangURL }}
-						{{ partial "social-sharer.html" (dict "context" . "url" .url "name" .name) }}
+						{{ $url := .url | relLangURL }}
+						{{ partial "social-sharer.html" (dict "context" . "url" $url "name" .name) }}
 						{{ end }}
 				</ul>
 			</div>
-			<div class="blog"> {{ .Site.Params.url | relLangURL }}
+			<div class="blog">
 				<header>
 					{{ i18n "footer_follow_blog" }} <a href="{{ "blog/" | relLangURL }}">{{ i18n "footer_follow_blog_blog" }}</a>
 				</header>
