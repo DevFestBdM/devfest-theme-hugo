@@ -21,7 +21,9 @@
 				<li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" >
 				{{ if (hasPrefix .URL "http") }}
 				<a class="external" rel="noreferrer" target="_blank" href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a>
-				{{ else if (isset .Page "Params") and (isset .Page.Params "icon") }}
+				{{ else if (strings.HasSuffix .URL "pdf")}}
+				<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+				{{ else if (isset .Page.Params "icon") }}
 				<a href="{{ .URL | relLangURL }}" class="link-icon" title="{{ .Name }}">
 						{{ partial "icon.html" .Page.Params.icon }}
 				</a>
