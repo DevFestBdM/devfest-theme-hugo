@@ -43,11 +43,16 @@
   flex-basis: 320px;
 }
 
-.partners-group.partner-gold ul li, .partners-group.partner-startup ul li {
+.partners-group.partner-gold ul li {
   height: var(--partner-gold-height);
   flex-basis: 200px;
 }
 
+.partners-group.partner-startup ul li {
+  height: var(--partner-startup-height);
+  flex-basis: 140px;
+
+}
 
 /* Partner fancy name */
 

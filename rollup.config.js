@@ -1,7 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 const {Logger, LogLevel} = require('plop-logger');
-const {colorEmojiConfig} = require('plop-logger/lib/extra/colorEmojiConfig');
+const {colorEmojiConfig} = require('plop-logger');
 
 Logger.config = colorEmojiConfig;
 const logger = Logger.getLogger('icons');
