@@ -18,9 +18,10 @@
 	</div>
 	{{ end }}
 
+
 	<div class="complexity">{{ .Params.level }}</div>
 	<div class="type type-{{ anchorize .Params.format }}">
-		{{ index (index (where .Site.Data.formats "key"  .Params.format) 0) "name" }}
+		{{ index ( index (where .Site.Data.formats "key"  .Params.format) 0 ) "name" }}
 	</div>
 
 	<div>
